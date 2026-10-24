@@ -300,7 +300,11 @@ export function Workspace() {
               </div>
 
               <div className="packBody" role="tabpanel">
-                {error ? <div className="errorBox">{error}</div> : null}
+                {error ? (
+                  <div className="errorBox" role="alert">
+                    {error}
+                  </div>
+                ) : null}
 
                 {busy !== "idle" ? (
                   <div className="loading" role="status" aria-live="polite">
